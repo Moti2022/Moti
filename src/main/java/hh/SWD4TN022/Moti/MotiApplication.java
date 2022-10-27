@@ -9,7 +9,7 @@ public class MotiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MotiApplication.class, args);
 	}
-//Aaaaaaa
 }
 
 // Tämä on testi
+// toinen testi
