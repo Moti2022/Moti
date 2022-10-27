@@ -11,21 +11,4 @@ public class MotiApplication {
 	}
 }
 
-// Tämä on testi
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// toinen testi
-=======
-<<<<<<< HEAD
-// Kolmas kommentti
-=======
-// toinen testi
->>>>>>> dc09e10e2c907c4268f4cfa9838656ba0dea1dd5
->>>>>>> 18dbcba26b770a7398e956a73048f24910d0fb26
-=======
-// Kolmas kommentti
->>>>>>> fe456a8c85bced92c682b327f1526f466689b83c
-=======
-// Kolmas kommentti
->>>>>>> 72fd4a99d4405678d2a107e25aeb55bf9ca8db85
+
