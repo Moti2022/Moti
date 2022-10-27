@@ -14,6 +14,7 @@ public class MotiApplication {
 // Tämä on testi
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // toinen testi
 =======
 <<<<<<< HEAD
@@ -25,3 +26,6 @@ public class MotiApplication {
 =======
 // Kolmas kommentti
 >>>>>>> fe456a8c85bced92c682b327f1526f466689b83c
+=======
+// Kolmas kommentti
+>>>>>>> 72fd4a99d4405678d2a107e25aeb55bf9ca8db85
