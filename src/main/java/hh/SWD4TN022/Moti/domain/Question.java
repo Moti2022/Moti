@@ -1,9 +1,14 @@
 package hh.SWD4TN022.Moti.domain;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
 
 @Entity
 public class Question {
@@ -13,6 +18,9 @@ public class Question {
 	private Long question_id;
 	private String name;
 
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "question")
+	private List <Query> queries;
+	
 	public Question() {
 	}
 
@@ -29,6 +37,10 @@ public class Question {
 	public String getName() {
 		return name;
 	}
+	
+	public List<Query> getQueries() {
+		return queries;
+	}
 
 	public void setQuestion_id(Long question_id) {
 		this.question_id = question_id;
@@ -36,6 +48,10 @@ public class Question {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public void setQueries(List<Query> queries) {
+		this.queries = queries;
 	}
 
 	@Override
