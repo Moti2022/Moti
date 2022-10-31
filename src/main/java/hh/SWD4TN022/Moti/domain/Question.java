@@ -23,9 +23,10 @@ public class Question {
 	public Question() {
 	}
 
-	public Question(String name) {
+	public Question(String name, Query query) {
 		super();
 		this.name = name;
+		this.query = query;
 	}
 
 	public Long getQuestion_id() {
