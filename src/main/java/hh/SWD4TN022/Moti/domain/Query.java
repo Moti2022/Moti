@@ -2,10 +2,14 @@ package hh.SWD4TN022.Moti.domain;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
@@ -20,13 +24,18 @@ public class Query {
     String heading;
     String description;
 
-    List <Question> questions;
+    @JsonIgnore
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "query")
+    private List <Question> questions;
 
-    public Query(){
+    Query() {}
 
+    public Query(String heading, String description){
+        super();
+
+        this.heading = heading;
+        this.description = description;
     }
-
-
 
     public Long getQuery_id() {
         return query_id;
@@ -60,12 +69,7 @@ public class Query {
         this.questions = questions;
     }
 
-    public Query(String heading, String description){
-        super();
-
-        this.heading = heading;
-        this.description = description;
-    }
+  
     
     
 
