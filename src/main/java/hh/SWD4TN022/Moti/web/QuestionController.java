@@ -23,7 +23,7 @@ public class QuestionController {
 		return "questionlist";
 	}
 
-	// Rest all questions
+	// REST all questions
 	@GetMapping("/questions")
 	public @ResponseBody List<Question> questionListRest() {
 		return (List<Question>) questionRepo.findAll();
