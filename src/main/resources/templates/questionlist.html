@@ -19,7 +19,7 @@
 			<th>Id</th>
 			<th>Name</th>
 		</tr>
-		<tr th:each="question : ${question}">
+		<tr th:each="question : ${questions}">
 			<td th:text="${question.question_id}">ID</td>
 			<td th:text="${question.name}">Name</td>
 		</tr>
