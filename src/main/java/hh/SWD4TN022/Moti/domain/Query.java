@@ -28,7 +28,7 @@ public class Query {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "query")
     private List <Question> questions;
 
-    Query() {}
+    public Query() {}
 
     public Query(String heading, String description){
         super();

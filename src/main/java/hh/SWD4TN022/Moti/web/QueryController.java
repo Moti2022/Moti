@@ -4,8 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-
+import hh.SWD4TN022.Moti.domain.Query;
 import hh.SWD4TN022.Moti.domain.QueryRepository;
 
 
@@ -22,6 +25,19 @@ public class QueryController {
 		model.addAttribute("queries", queryRepo.findAll()  );
 		return "querylist";
 	}
+
+	@GetMapping("/addquery")
+	public String addQuery(Model model){
+		model.addAttribute("query", new Query());
+		return "addquery";
+	}
+
+	@PostMapping(value="/save")
+	public String saveQuery(@ModelAttribute Query newQuery, Model model){
+		queryRepo.save(newQuery);
+		return "redirect:querylist";
+	}
+
 }
 	
 	
