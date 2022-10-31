@@ -37,6 +37,7 @@ public class Query {
         this.description = description;
     }
 
+
     public Long getQuery_id() {
         return query_id;
     }
