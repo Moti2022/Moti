@@ -26,6 +26,7 @@ public class MotiApplication {
 			queryRepository.save(new Query("test query", "test" ));
 
 			questionRepository.save(new Question("Kysymys", queryRepository.findByHeading("test query").get(0)));
+			questionRepository.save(new Question("Kysymys2", queryRepository.findByHeading("test query").get(0)));
 						
 		};
 	}
