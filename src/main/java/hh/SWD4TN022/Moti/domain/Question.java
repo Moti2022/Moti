@@ -18,14 +18,13 @@ public class Question {
 
 	@ManyToOne
 	@JoinColumn(name = "question_id")
-	private Question question;
+	private Query query;
 	
 	public Question() {
 	}
 
-	public Question(Long question_id, String name) {
+	public Question(String name) {
 		super();
-		this.question_id = question_id;
 		this.name = name;
 	}
 
@@ -36,7 +35,10 @@ public class Question {
 	public String getName() {
 		return name;
 	}
-	
+
+	public Query getQuery() {
+		return query;
+	}
 
 	public void setQuestion_id(Long question_id) {
 		this.question_id = question_id;
@@ -46,8 +48,13 @@ public class Question {
 		this.name = name;
 	}
 
+	public void setQuery(Query query) {
+		this.query = query;
+	}
+
 	@Override
 	public String toString() {
-		return "Question [question_id=" + question_id + ", name=" + name + "]";
+		return "Question [question_id=" + question_id + ", name=" + name + ", query=" + query + "]";
 	}
+
 }
