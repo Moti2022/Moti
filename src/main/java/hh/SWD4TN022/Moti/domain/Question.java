@@ -1,6 +1,5 @@
 package hh.SWD4TN022.Moti.domain;
 
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,14 +18,13 @@ public class Question {
 	@ManyToOne
 	@JoinColumn(name = "query_id")
 	private Query query;
-	
+
 	public Question() {
 	}
 
-	public Question(String name, Query query) {
+	public Question(String name) {
 		super();
 		this.name = name;
-		this.query = query;
 	}
 
 	public Long getQuestion_id() {

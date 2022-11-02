@@ -11,68 +11,60 @@ import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-
 @Entity
 public class Query {
 
-    @Id 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long query_id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	Long query_id;
 
+	String heading;
+	String description;
 
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "query")
+	private List<Question> questions;
 
-    String heading;
-    String description;
+	public Query() {
+	}
 
-    @JsonIgnore
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "query")
-    private List <Question> questions;
+	public Query(String heading, String description, List<Question> questions) {
+		super();
+		this.heading = heading;
+		this.description = description;
+		this.questions = questions;
+	}
 
-    public Query() {}
+	public Long getQuery_id() {
+		return query_id;
+	}
 
-    public Query(String heading, String description){
-        super();
+	public void setQuery_id(Long query_id) {
+		this.query_id = query_id;
+	}
 
-        this.heading = heading;
-        this.description = description;
-    }
+	public String getHeading() {
+		return heading;
+	}
 
+	public void setHeading(String heading) {
+		this.heading = heading;
+	}
 
-    public Long getQuery_id() {
-        return query_id;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public void setQuery_id(Long query_id) {
-        this.query_id = query_id;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-    public String getHeading() {
-        return heading;
-    }
+	public List<Question> getQuestions() {
+		return questions;
+	}
 
-    public void setHeading(String heading) {
-        this.heading = heading;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public List<Question> getQuestions() {
-        return questions;
-    }
-
-    public void setQuestions(List<Question> questions) {
-        this.questions = questions;
-    }
-
-  
-    
-    
-
+	public void setQuestions(List<Question> questions) {
+		this.questions = questions;
+	}
 
 }

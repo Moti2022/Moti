@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import hh.SWD4TN022.Moti.domain.Query;
 import hh.SWD4TN022.Moti.domain.QueryRepository;
+import hh.SWD4TN022.Moti.domain.QuestionRepository;
 
 @Controller
 public class QueryController {
@@ -19,10 +20,13 @@ public class QueryController {
 	@Autowired
 	private QueryRepository queryRepo;
 
+	@Autowired
+	private QuestionRepository questionRepo;
+
 	@GetMapping("/querylist")
 	public String getQuery(Model model) {
-
 		model.addAttribute("queries", queryRepo.findAll());
+		model.addAttribute("questions", questionRepo.findAll());
 		return "querylist";
 	}
 
