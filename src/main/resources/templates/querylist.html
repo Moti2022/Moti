@@ -23,6 +23,7 @@
 		<tr th:each="query : ${queries}">
 			<td th:text="${query.heading}">Heading</td>
 			<td th:text="${query.description}">Name</td>
+			<td th:text="${query.getQuestions()}">Questions</td>
 			<td th:each="question : ${questions}" th:text="${question.name}">Questions</td>
 		</tr>
 	</table>
