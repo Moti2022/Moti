@@ -1,12 +1,14 @@
 package hh.SWD4TN022.Moti.web;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -46,5 +48,11 @@ public class QueryController {
 	@GetMapping("/queries")
 	public @ResponseBody List<Query> queryListRest() {
 		return (List<Query>) queryRepo.findAll();
+	}
+
+	// REST fetching query by id
+	@GetMapping("queries/{query_id}")
+	public @ResponseBody Optional<Query> findQueryRest(@PathVariable("query_id") Long id) {
+		return queryRepo.findById(id);
 	}
 }
