@@ -28,11 +28,10 @@ public class Query {
 	public Query() {
 	}
 
-	public Query(String heading, String description, List<Question> questions) {
+	public Query(String heading, String description) {
 		super();
 		this.heading = heading;
 		this.description = description;
-		this.questions = questions;
 	}
 
 	public Long getQuery_id() {
