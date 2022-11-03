@@ -4,34 +4,34 @@
 	<title>Querylist</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+	<link rel="stylesheet" href="/css/querylist.css" type="text/css">
 </head>
 <body>
 	
-	<div class="col-md-4">
+	<!-- Header -->
+	<div class="header">
 		<h1>Queries</h1>
 	</div>
-	<div class="col-md-4">
 	
+	<!-- Create new Query -button -->
+	<div class="createQuery">
+		<a href="/addquery">
+			<button>Create new Query</button>
+		</a>
 	</div>
-
-	<a href="/addquery">
-		<button>Create query</button>
-	 </a>
-	
+	 
+	 <!-- Table -->
 	<table class="table table-striped">
 		<tr>
 			<th>Heading</th>
 			<th>Description</th>
 			<th></th>
 		</tr>
-
-
 		<tr th:each="query : ${queries}">
 			<td th:text="${query.heading}">Heading</td>
 			<td th:text="${query.description}">Name</td>
 			<td><a href="/addquestion">add question</a></td>
 		</tr>
 	</table>
-	<!--  <a href="/add" class="btn btn-success">Add Question</a>   --> 
 </body>
 </html>
