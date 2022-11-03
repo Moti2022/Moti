@@ -22,13 +22,14 @@
 		<tr>
 			<th>Heading</th>
 			<th>Description</th>
-			<th></th>
+			<th>Questions</th>
 		</tr>
 
 
 		<tr th:each="query : ${queries}">
 			<td th:text="${query.heading}">Heading</td>
 			<td th:text="${query.description}">Name</td>
+			<td th:each="question : ${query.getQuestions()}" th:text="${question.name}">Questions</td>
 			<td><a href="/addquestion">add question</a></td>
 		</tr>
 	</table>
