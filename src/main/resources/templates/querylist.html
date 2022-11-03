@@ -13,6 +13,10 @@
 	<div class="col-md-4">
 	
 	</div>
+
+	<a href="/addquery">
+		<button>Create query</button>
+	 </a>
 	
 	<table class="table table-striped">
 		<tr>
@@ -20,11 +24,14 @@
 			<th>Description</th>
 			<th>Questions</th>
 		</tr>
+
+
 		<tr th:each="query : ${queries}">
 			<td th:text="${query.heading}">Heading</td>
 			<td th:text="${query.description}">Name</td>
 			<td th:text="${query.getQuestions()}">Questions</td>
 			<td th:each="question : ${questions}" th:text="${question.name}">Questions</td>
+			<td><a href="/addquestion">add question</a></td>
 		</tr>
 	</table>
 	<!--  <a href="/add" class="btn btn-success">Add Question</a>   --> 
