@@ -30,14 +30,14 @@ public class QuestionController {
 	}
 
 	@GetMapping("/addquestion")
-	public String addQuestion(Model model){
+	public String addQuestion(Model model) {
 		model.addAttribute("question", new Question());
 		model.addAttribute("queries", queryRepo.findAll());
 		return "addquestion";
 	}
 
-	@PostMapping(value="/save2")
-	public String saveQuestion(@ModelAttribute Question newQuestion, Model model){
+	@PostMapping(value = "/savequestion")
+	public String saveQuestion(@ModelAttribute Question newQuestion, Model model) {
 		questionRepo.save(newQuestion);
 		return "redirect:querylist";
 	}

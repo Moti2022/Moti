@@ -47,8 +47,8 @@ public class QueryController {
 		return "redirect:querylist";
 	}
 
-	// Add questions for query based on it's id
-	@GetMapping("/listquestions/{query_id}")
+	// Add questions for query based on it's id (NOT FINISHED)
+	@GetMapping("/listquestions")
 	public String listQueryQuestions(Model model) {
 		model.addAttribute("query", queryRepo.findAll());
 		return "listquestions";

@@ -32,8 +32,8 @@
 				<td th:text="${query.heading}">Heading</td>
 				<td th:text="${query.description}">Name</td>
 				<td style="width:300px;">
+					<a class="listQuestions" href="/listquestions">Open Questions</a>
 					<a class="addQuestion" href="/addquestion">Add Question</a>
-					<a class="listQuestions"href="@/listquestions/{query_id}">Open Questions</a>
 				</td>
 				<td th:each="question : ${query.getQuestions()}" th:text="${question.name}">Questions</td>
 			</tr>

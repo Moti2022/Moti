@@ -4,28 +4,32 @@
 	<title>Querylist</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+	<link type="text/css" rel="stylesheet" href="/css/addquery.css">
 </head>
 <body>
-	
-	<div class="col-md-4">
-		<h1>Add query</h1>
+	<div class="content">
+		<div class="header">
+			<h1>Add query</h1>
+		</div>	
+	    <div class="addQueryForm">
+		    <form th:object="${query}" th:action="@{../save}" action="#" method="post">
+		        <div class="form-row">
+					<div class="col">
+				  		<label for="heading">Name</label>
+						<input type="text" id="heading" class="form-control" th:field="*{heading}" />
+					</div>
+					<br>
+					<div class="col">
+						<label for="description">Description</label>
+						<textArea id="description" class="form-control" th:field="*{description}" rows="6"></textArea>
+					</div>
+				</div>
+				<input class="saveQuery" type="submit" value="Save Query"></input>
+		    </form>
+	    </div>
+	    <br>
+	    <a href="/querylist">Back to Queries</a>
 	</div>
-	<div class="col-md-4">
-	
-	</div>
-	
-    <form th:object="${query}" th:action="@{../save}" action="#" method="post">
-        <label for="heading">Heading</label>
-        <input type="text" id="heading" th:field="*{heading}">
-
-        <label for="description">Description</label>
-        <input type="text" id="description" th:field="*{description}">
-
-        <input type="submit" value="save"></input>
-
-    </form>
-
-
-	<!--  <a href="/add" class="btn btn-success">Add Question</a>   --> 
+	<!--  <a href="/add" class="btn btn-success">Add Question</a>   -->
 </body>
 </html>
