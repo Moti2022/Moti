@@ -47,5 +47,4 @@ public class QueryController {
 	public @ResponseBody List<Query> queryListRest() {
 		return (List<Query>) queryRepo.findAll();
 	}
-
 }
