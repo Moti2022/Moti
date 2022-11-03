@@ -1,3 +1,55 @@
 @charset "UTF-8";
 
-.queryButton{border: none; margin:20px;}
+.content{
+	margin: 30px;
+}
+
+.queryButton{
+	border: none; 
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 5px;
+	border-radius:5px;
+	background-color:#715C8C; 
+	color: white;
+}
+
+.queryButton:hover{
+	text-decoration: none;
+	background-color:#715C8C; 
+	color: black;
+}
+
+.addQuestion{
+	border: none;
+	padding: 5px;
+	margin-right:20px;
+	border-radius:5px;
+	background-color:#715C8C; 
+	color: white;
+}
+.addQuestion:hover{
+	text-decoration: none;
+	background-color:#715C8C; 
+	color: black;
+}
+
+.listQuestions{
+	border: none;
+	padding: 5px;
+	margin-right:20px;
+	border-radius:5px;
+	background-color:#715C8C; 
+	color: white;
+}
+
+.listQuestions:hover{
+	text-decoration: none;
+	background-color:#715C8C; 
+	color: black;
+}
+
+
+
+
+

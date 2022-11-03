@@ -25,6 +25,7 @@ public class QueryController {
 	@Autowired
 	private QuestionRepository questionRepo;
 
+	// List all queries
 	@GetMapping("/querylist")
 	public String getQuery(Model model) {
 		model.addAttribute("queries", queryRepo.findAll());
@@ -32,16 +33,25 @@ public class QueryController {
 		return "querylist";
 	}
 
+	// Add new Query
 	@GetMapping("/addquery")
 	public String addQuery(Model model) {
 		model.addAttribute("query", new Query());
 		return "addquery";
 	}
 
+	// Save new Query
 	@PostMapping(value = "/save")
 	public String saveQuery(@ModelAttribute Query newQuery, Model model) {
 		queryRepo.save(newQuery);
 		return "redirect:querylist";
+	}
+
+	// Add questions for query based on it's id
+	@GetMapping("/listquestions/{query_id}")
+	public String listQueryQuestions(Model model) {
+		model.addAttribute("query", queryRepo.findAll());
+		return "listquestions";
 	}
 
 	// REST all queries
