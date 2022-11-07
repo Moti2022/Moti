@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import hh.SWD4TN022.Moti.domain.Query;
@@ -65,4 +66,12 @@ public class QueryController {
 	public @ResponseBody Optional<Query> findQueryRest(@PathVariable("query_id") Long id) {
 		return queryRepo.findById(id);
 	}
+	
+	// REST saving a query
+	@PostMapping("/queries")
+	public @ResponseBody Query saveQueryRest(@RequestBody Query query) {
+		return queryRepo.save(query);
+	}
+	
+	//TODO: REST put
 }
