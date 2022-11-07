@@ -1,11 +1,15 @@
 package hh.SWD4TN022.Moti.web;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,8 +21,11 @@ import hh.SWD4TN022.Moti.domain.QueryRepository;
 import hh.SWD4TN022.Moti.domain.Question;
 import hh.SWD4TN022.Moti.domain.QuestionRepository;
 
+@CrossOrigin
 @Controller
 public class QuestionController {
+
+	String url;
 
 	@Autowired
 	private QuestionRepository questionRepo;
@@ -33,16 +40,22 @@ public class QuestionController {
 	}
 
 	@GetMapping("/addquestion/{id}")
-	public String addQuestion(@PathVariable("id") Long query_id, Model model) {
+	public String addQuestion(@PathVariable("id") Long query_id, Model model, HttpServletRequest request) {
+		model.addAttribute("questions", questionRepo.findAll());
 		model.addAttribute("question", new Question());
 		model.addAttribute("query", queryRepo.findById(query_id).get());
+
+		url = request.getRequestURI().toString();
+		System.out.println(url);
 		return "addquestion";
 	}
 
 	@PostMapping(value = "/savequestion")
 	public String saveQuestion(@ModelAttribute Question newQuestion, Model model) {
 		questionRepo.save(newQuestion);
-		return "redirect:querylist";
+		List<String> urlList = Arrays.asList(url.split("/"));
+		String redirectId = urlList.get(2);
+		return "redirect:/addquestion/" + redirectId;
 	}
 
 	// REST all questions
