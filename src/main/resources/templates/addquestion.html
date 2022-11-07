@@ -15,10 +15,11 @@
 		    <form th:object="${question}" th:action="@{../savequestion}" action="#" method="post">
 		        <div class="form-row">
 					<div class="col">
-						<label for="query">Choose Query</label>
+
 						<select id="queryList" th:field="*{query}" class="form-control">
-				            <option th:each="query:${queries}" th:value="${query.query_id}" th:text="${query.heading}"></option>
+				            <option th:each="query:${query}" th:value="${query.query_id}" th:text="${query.heading}"></option>
 				        </select>
+
 					</div>
 					<br>
 					<div class="col">

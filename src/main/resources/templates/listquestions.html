@@ -11,9 +11,8 @@
 		<tr>
 			<th>Questions</th>
 		</tr>
-		<tr>
-			<td>Kysymys</td>
-			<td>Kysymys</td>
+		<tr th:each="question : ${query.getQuestions()}">
+			<td th:text="${question.name}">Name</td>
 		</tr>
 	</table>
 </body>

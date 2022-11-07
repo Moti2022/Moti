@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -29,10 +30,10 @@ public class QuestionController {
 		return "questionlist";
 	}
 
-	@GetMapping("/addquestion")
-	public String addQuestion(Model model) {
+	@GetMapping("/addquestion/{id}")
+	public String addQuestion(@PathVariable("id") Long query_id, Model model) {
 		model.addAttribute("question", new Question());
-		model.addAttribute("queries", queryRepo.findAll());
+		model.addAttribute("query", queryRepo.findById(query_id).get());
 		return "addquestion";
 	}
 

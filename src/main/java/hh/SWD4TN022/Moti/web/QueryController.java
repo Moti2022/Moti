@@ -48,9 +48,9 @@ public class QueryController {
 	}
 
 	// Add questions for query based on it's id (NOT FINISHED)
-	@GetMapping("/listquestions")
-	public String listQueryQuestions(Model model) {
-		model.addAttribute("query", queryRepo.findAll());
+	@GetMapping("/listquestions/{id}")
+	public String listQueryQuestions(@PathVariable("id") Long query_id, Model model) {
+		model.addAttribute("query", queryRepo.findById(query_id).get());
 		return "listquestions";
 	}
 
