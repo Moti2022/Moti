@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import hh.SWD4TN022.Moti.domain.AnswerRepository;
 import hh.SWD4TN022.Moti.domain.Query;
 import hh.SWD4TN022.Moti.domain.QueryRepository;
 import hh.SWD4TN022.Moti.domain.Question;
@@ -18,7 +19,7 @@ public class MotiApplication {
 	}
 
 	@Bean
-	public CommandLineRunner moti(QueryRepository queryRepository, QuestionRepository questionRepository) {
+	public CommandLineRunner moti(QueryRepository queryRepository, QuestionRepository questionRepository, AnswerRepository answerRepository) {
 		return (args) -> {
 
 			// queryRepository.save(new Query("test query", "test"));
