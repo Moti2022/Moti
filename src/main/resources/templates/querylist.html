@@ -25,8 +25,6 @@
 			<tr>
 				<th>Heading</th>
 				<th>Description</th>
-				<th></th>
-				<th>Questions (sarakkeena vikana, koska ne eivät jää tähän)</th>
 			</tr>
 			<tr th:each="query : ${queries}">
 				<td th:text="${query.heading}">Heading</td>
@@ -35,7 +33,7 @@
 					<a class="listQuestions" th:href="@{/listquestions/{id}(id=${query.query_id})}">Open Questions</a>
 					<a class="addQuestion" th:href="@{/addquestion/{id}(id=${query.query_id})}">Add Question</a>
 				</td>
-				<td th:each="question : ${query.getQuestions()}" th:text="${question.name}">Questions</td>
+		
 			</tr>
 		</table>
 	</div>

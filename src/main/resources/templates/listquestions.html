@@ -5,7 +5,6 @@
 <title></title>
 </head>
 <body>
-	<p>Tänne pitäisi saada tietyn kyselyn kysymykset tulostettua</p>
 	<a href="/querylist">Back to Queries</a>
 	<table>
 		<tr>
@@ -13,6 +12,8 @@
 		</tr>
 		<tr th:each="question : ${query.getQuestions()}">
 			<td th:text="${question.name}">Name</td>
+			<td><textarea></textarea></td>
+			
 		</tr>
 	</table>
 </body>
