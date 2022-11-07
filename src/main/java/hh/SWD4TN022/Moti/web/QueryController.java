@@ -26,6 +26,12 @@ public class QueryController {
 	@Autowired
 	private QuestionRepository questionRepo;
 
+	// JSON Examples for REST-homepage
+	@GetMapping("/resthome")
+	public String restHome () {
+		return "resthome";
+	}
+	
 	// List all queries
 	@GetMapping("/querylist")
 	public String getQuery(Model model) {
