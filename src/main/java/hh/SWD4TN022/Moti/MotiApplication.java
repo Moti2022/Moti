@@ -25,13 +25,6 @@ public class MotiApplication {
 	public CommandLineRunner moti(QueryRepository queryRepository, QuestionRepository questionRepository, AnswerRepository answerRepository) {
 		return (args) -> {
 
-			// queryRepository.save(new Query("test query", "test"));
-
-			// questionRepository.save(new Question("Kysymys",
-			// queryRepository.findByHeading("test query").get(0)));
-			// questionRepository.save(new Question("Kysymys2",
-			// queryRepository.findByHeading("test query").get(0)));
-
 			Query query1 = new Query("Kulttuurikysely",
 					"Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia");
 			queryRepository.save(query1);
