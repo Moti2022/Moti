@@ -35,7 +35,7 @@ public class QueryController {
 	}
 	
 	// List all queries
-	@GetMapping("/querylist")
+	@GetMapping({"/", "/querylist"})
 	public String getQuery(Model model) {
 		model.addAttribute("queries", queryRepo.findAll());
 		model.addAttribute("questions", questionRepo.findAll());

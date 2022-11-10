@@ -15,7 +15,7 @@
 		    <form th:object="${question}" th:action="@{../savequestion}" action="#" method="post">
 		        <div class="form-row">
 					<table>
-						<tr th:each="question : ${questions}">
+						<tr th:each="question : ${query.getQuestions()}">
 							<td th:text="${question.name}">Name</td>
 						</tr>
 					</table>
