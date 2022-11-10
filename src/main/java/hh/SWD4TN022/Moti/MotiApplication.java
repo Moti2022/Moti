@@ -48,4 +48,5 @@ public class MotiApplication {
 			questionRepository.save(q4);
 		};
 	}
+
 }

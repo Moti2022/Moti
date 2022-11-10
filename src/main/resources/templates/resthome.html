@@ -5,28 +5,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"
 	th:href="@{/css/bootstrap.min.css}" />
-<link rel="stylesheet" href="/css/rest" type="text/css">
+<link rel="stylesheet" href="/css/resthome.css" type="text/css">
 </head>
 <body>
 	<div class="content">
-		<h2>All queries</h2>
+		<h1>REST Homepage</h1>
+		<h2>All Queries</h2>
 
 		<p>Method: GET</p>
-		<p>Endpoint: /queries</p>
+		<p>Endpoint: <a href="https://moti2022.herokuapp.com/queries">/queries</a></p>
 		<p>JSON example:</p>
 
 		<pre>
 		<code>
 [
   {
-   "query_id": 1,
-   "heading": "Kulttuurikysely",
-   "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
+    "query_id": 1,
+    "heading": "Kulttuurikysely",
+    "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
   },
   {
-   "query_id": 2,
-   "heading": "Urheilutapahtuma Helsingissä 2023",
-   "description": "Millainen on sinun unelma urheilutapahtumasi ensi vuodelle"
+    "query_id": 2,
+    "heading": "Urheilutapahtuma Helsingissä 2023",
+    "description": "Millainen on sinun unelma urheilutapahtumasi ensi vuodelle"
   }
 ]
 		</code>
@@ -34,44 +35,112 @@
 
 		<h2>Query by id</h2>
 		<p>Method: GET</p>
-		<p>Endpoint: /queries/{id}</p>
+		<p>Endpoint: <a href="https://moti2022.herokuapp.com/queries/1">/queries/1</a></p>
 		<p>JSON example:</p>
 
 		<pre>
 		<code>
 {
-    "query_id": 1,
-    "heading": "Kulttuurikysely",
-    "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
+  "query_id": 1,
+  "heading": "Kulttuurikysely",
+  "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
 }
 		</code>
 	</pre>
 
-		<h2>All questions</h2>
+		<h2>New Query</h2>
+		<p>Method: POST</p>
+		<p>JSON example:</p>
+
+		<pre>
+		<code>
+{
+  "heading": "Kulttuurikysely",
+  "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
+}
+		</code>
+	</pre>
+
+		<h2>All Questions</h2>
 		<p>Method: GET</p>
-		<p>Endpoint: /questions</p>
+		<p>Endpoint: <a href="https://moti2022.herokuapp.com/questions">/questions</a></p>
 		<p>JSON example:</p>
 
 		<pre>
 <code>	
-
+[
+  {
+    "question_id": 1,
+    "name": "Mitä elokuvaa suosittelet",
+    "query": {
+      "query_id": 1,
+      "heading": "Kulttuurikysely",
+      "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
+      }
+  },
+  {
+    "question_id": 2,
+    "name": "Mitä tv-sarjaa suosittelet",
+    "query": {
+      "query_id": 1,
+      "heading": "Kulttuurikysely",
+      "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
+      }
+  },
+  {
+    "question_id": 3,
+    "name": "Mitä musiiikkia suosittelet",
+    "query": {
+      "query_id": 1,
+      "heading": "Kulttuurikysely",
+      "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
+      }
+  },
+  {
+    "question_id": 4,
+    "name": "Mitä urheilulajeja haluat, että tapahtumassa pääsisi kokeilemaan?",
+    "query": {
+      "query_id": 2,
+      "heading": "Urheilutapahtuma Helsingissä 2023",
+      "description": "Millainen on sinun unelma urheilutapahtumasi ensi vuodelle"
+      }
+  }
+]
 </code>
 </pre>
 
 		<h2>Question by id</h2>
 		<p>Method: GET</p>
-		<p>Endpoint: /questions/{id}</p>
+		<p>Endpoint: <a href="https://moti2022.herokuapp.com/questions/1">/questions/1</a></p>
 		<p>JSON example:</p>
 
 		<pre>
 		<code>
-			{
-    "question_id": 1,
-    "name": "Mitä elokuvaa suosittelet",
-    "query": {
-        "query_id": 1,
-        "heading": "Kulttuurikysely",
-        "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
+{
+  "question_id": 1,
+  "name": "Mitä elokuvaa suosittelet",
+  "query": {
+    "query_id": 1,
+    "heading": "Kulttuurikysely",
+    "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
+    }
+}
+		</code>
+	</pre>
+
+		<h2>New Question</h2>
+		<p>Method: POST</p>
+		<p>JSON example:</p>
+
+		<pre>
+		<code>
+{
+  "question_id": 1,
+  "name": "Mitä elokuvaa suosittelet",
+  "query": {
+     "query_id": 1,
+     "heading": "Kulttuurikysely",
+     "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
     }
 }
 		</code>
