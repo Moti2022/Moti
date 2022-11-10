@@ -16,7 +16,7 @@
                 
                 <tr th:each="answer: ${question.getAnswers()}">
                     <td >
-                        <h3 th:text="${answer.text}"></h3>
+                        <h4 th:text="'- ' + ${answer.text}"></h4>
                     </td>
                 </tr>
             <td>
