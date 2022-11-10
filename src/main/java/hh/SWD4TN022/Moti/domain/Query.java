@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 public class Query {
@@ -21,7 +22,7 @@ public class Query {
 	String heading;
 	String description;
 
-	@JsonIgnore
+	@JsonIgnoreProperties("query")// Ignorataa questions listassa olevien kysymsolioiden query attribuutti, jolloin
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "query")
 	private List<Question> questions;
 
