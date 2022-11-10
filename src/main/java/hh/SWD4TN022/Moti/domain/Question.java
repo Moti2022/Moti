@@ -1,11 +1,17 @@
 package hh.SWD4TN022.Moti.domain;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Question {
@@ -18,6 +24,10 @@ public class Question {
 	@ManyToOne
 	@JoinColumn(name = "query_id")
 	private Query query;
+
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "question")
+	private List<Answer> answers;
 
 	public Question() {
 	}
@@ -55,6 +65,14 @@ public class Question {
 	@Override
 	public String toString() {
 		return "Question [question_id=" + question_id + ", name=" + name + ", query=" + query + "]";
+	}
+
+	public List<Answer> getAnswers() {
+		return answers;
+	}
+
+	public void setAnswers(List<Answer> answers) {
+		this.answers = answers;
 	}
 
 }

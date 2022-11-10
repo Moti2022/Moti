@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" href="/css/querylist.css" type="text/css">
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<a href="/querylist">Back to Queries</a><br>
+
+    <table >
+        <span  th:each="question : ${questions}">
+            <h2 th:text="${question.name}"></h2>
+            <td >
+                
+                <tr th:each="answer: ${question.getAnswers()}">
+                    <td >
+                        <h3 th:text="${answer.text}"></h3>
+                    </td>
+                </tr>
+            <td>
+        </span>
+    </table>
+</body>
+</html>

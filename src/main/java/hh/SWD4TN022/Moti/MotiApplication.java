@@ -1,10 +1,13 @@
 package hh.SWD4TN022.Moti;
 
+import java.util.List;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import hh.SWD4TN022.Moti.domain.Answer;
 import hh.SWD4TN022.Moti.domain.AnswerRepository;
 import hh.SWD4TN022.Moti.domain.Query;
 import hh.SWD4TN022.Moti.domain.QueryRepository;
@@ -46,6 +49,18 @@ public class MotiApplication {
 			questionRepository.save(q2);
 			questionRepository.save(q3);
 			questionRepository.save(q4);
+
+			Answer ans = new Answer("hyvä vastaus", q1);
+			Answer ans4 = new Answer("hyvä vastaus4444444444", q1);
+
+			Answer ans2 = new Answer("hyvä vastaus13123", q2);
+			Answer ans3 = new Answer("hyvä vastausdgsdgsdgdsrgsdvgdsg", q3);
+			answerRepository.save(ans);
+			answerRepository.save(ans2);
+			answerRepository.save(ans3);
+			answerRepository.save(ans4);
+	
+			
 		};
 	}
 }

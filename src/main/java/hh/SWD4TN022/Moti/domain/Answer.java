@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 public class Answer {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long answer_id;
 	private String text;
 	
@@ -22,7 +22,7 @@ public class Answer {
 	public Answer() {
 		
 	}
-	public Answer(Long answer_id, String text, Question question) {
+	public Answer(String text, Question question) {
 		super();
 		this.text = text;
 		this.question = question;
