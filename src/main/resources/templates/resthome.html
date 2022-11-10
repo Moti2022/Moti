@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Rest Homepage</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css"
+	th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet" href="/css/rest" type="text/css">
+</head>
+<body>
+	<div class="content">
+		<h2>All queries</h2>
+
+		<p>Method: GET</p>
+		<p>Endpoint: /queries</p>
+		<p>JSON example:</p>
+
+		<pre>
+		<code>
+[
+  {
+   "query_id": 1,
+   "heading": "Kulttuurikysely",
+   "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
+  },
+  {
+   "query_id": 2,
+   "heading": "Urheilutapahtuma Helsingissä 2023",
+   "description": "Millainen on sinun unelma urheilutapahtumasi ensi vuodelle"
+  }
+]
+		</code>
+	</pre>
+
+		<h2>Query by id</h2>
+		<p>Method: GET</p>
+		<p>Endpoint: /queries/{id}</p>
+		<p>JSON example:</p>
+
+		<pre>
+		<code>
+{
+    "query_id": 1,
+    "heading": "Kulttuurikysely",
+    "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
+}
+		</code>
+	</pre>
+
+		<h2>All questions</h2>
+		<p>Method: GET</p>
+		<p>Endpoint: /questions</p>
+		<p>JSON example:</p>
+
+		<pre>
+<code>	
+
+</code>
+</pre>
+
+		<h2>Question by id</h2>
+		<p>Method: GET</p>
+		<p>Endpoint: /questions/{id}</p>
+		<p>JSON example:</p>
+
+		<pre>
+		<code>
+			{
+    "question_id": 1,
+    "name": "Mitä elokuvaa suosittelet",
+    "query": {
+        "query_id": 1,
+        "heading": "Kulttuurikysely",
+        "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
+    }
+}
+		</code>
+	</pre>
+	</div>
+
+</body>
+</html>

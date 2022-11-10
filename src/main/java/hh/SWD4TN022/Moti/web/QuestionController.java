@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,7 @@ import hh.SWD4TN022.Moti.domain.QueryRepository;
 import hh.SWD4TN022.Moti.domain.Question;
 import hh.SWD4TN022.Moti.domain.QuestionRepository;
 
+@CrossOrigin
 @Controller
 public class QuestionController {
 
