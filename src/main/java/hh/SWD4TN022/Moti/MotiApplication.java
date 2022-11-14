@@ -25,33 +25,31 @@ public class MotiApplication {
 	public CommandLineRunner moti(QueryRepository queryRepository, QuestionRepository questionRepository, AnswerRepository answerRepository) {
 		return (args) -> {
 
-			Query query1 = new Query("Kulttuurikysely",
-					"Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia");
-			queryRepository.save(query1);
-			Query query2 = new Query("Urheilutapahtuma Helsingissä 2023",
-					"Millainen on sinun unelma urheilutapahtumasi ensi vuodelle");
-			queryRepository.save(query2);
+		Query query = new Query("Yleiskysely", "Opiskelu Haaga-Heliassa");
+		queryRepository.save(query);
 
-			Question q1 = new Question("Mitä elokuvaa suosittelet", query1);
-			Question q2 = new Question("Mitä tv-sarjaa suosittelet", query1);
-			Question q3 = new Question("Mitä musiiikkia suosittelet", query1);
+		Question q1 = new Question("Miksi päätit hakea Haaga-Heliaan?", query);
+		Question q2 = new Question("Oletko opiskellut jossain toisessa korkeamman tason koulutuksessa ennen Haaga-Heliaa?", query);
+		Question q3 = new Question("Mitä opiskelet Haaga-Heliassa?", query);
+		Question q4 = new Question("Oletko pitänyt opinnoistasi?", query);
+		Question q5 = new Question("Mitkä ovat olleet lempi kurssisi?", query);
+		Question q6 = new Question("Kuulutko mihinkään opiskelijajärjestöön?", query);
+		Question q7 = new Question("Mitä kehitettävää opetuksessa mielestäsi on?", query);
+		Question q8 = new Question("Haluaisitko lähteä vaihto-opiskelijaksi?", query);
+		Question q9 = new Question("Onko tavoitteesi pyrkiä töihin heti opintojen jälkeen?", query);
+		Question q10 = new Question("Suosittelisitko Haaga-Heliaa esim. kavereillesi?", query);
 
-			Question q4 = new Question("Mitä urheilulajeja haluat, että tapahtumassa pääsisi kokeilemaan?", query2);
+		questionRepository.save(q1);
+		questionRepository.save(q2);
+		questionRepository.save(q3);
+		questionRepository.save(q4);
+		questionRepository.save(q5);
+		questionRepository.save(q6);
+		questionRepository.save(q7);
+		questionRepository.save(q8);
+		questionRepository.save(q9);
+		questionRepository.save(q10);
 
-			questionRepository.save(q1);
-			questionRepository.save(q2);
-			questionRepository.save(q3);
-			questionRepository.save(q4);
-
-			Answer ans = new Answer("hyvä vastaus", q1);
-			Answer ans4 = new Answer("hyvä vastaus4444444444", q1);
-
-			Answer ans2 = new Answer("hyvä vastaus13123", q2);
-			Answer ans3 = new Answer("hyvä vastausdgsdgsdgdsrgsdvgdsg", q3);
-			answerRepository.save(ans);
-			answerRepository.save(ans2);
-			answerRepository.save(ans3);
-			answerRepository.save(ans4);
 	
 			
 		};
