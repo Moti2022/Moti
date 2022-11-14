@@ -28,6 +28,9 @@ public class MotiApplication {
 		Query query = new Query("Yleiskysely", "Opiskelu Haaga-Heliassa");
 		queryRepository.save(query);
 
+		Query query2 = new Query("Testquery", "test description");
+		queryRepository.save(query2);
+
 		Question q1 = new Question("Miksi päätit hakea Haaga-Heliaan?", query);
 		Question q2 = new Question("Oletko opiskellut jossain toisessa korkeamman tason koulutuksessa ennen Haaga-Heliaa?", query);
 		Question q3 = new Question("Mitä opiskelet Haaga-Heliassa?", query);
@@ -39,6 +42,8 @@ public class MotiApplication {
 		Question q9 = new Question("Onko tavoitteesi pyrkiä töihin heti opintojen jälkeen?", query);
 		Question q10 = new Question("Suosittelisitko Haaga-Heliaa esim. kavereillesi?", query);
 
+		Question testq = new Question("test question", query2);
+
 		questionRepository.save(q1);
 		questionRepository.save(q2);
 		questionRepository.save(q3);
@@ -49,6 +54,9 @@ public class MotiApplication {
 		questionRepository.save(q8);
 		questionRepository.save(q9);
 		questionRepository.save(q10);
+
+		questionRepository.save(testq);
+		
 
 	
 			
