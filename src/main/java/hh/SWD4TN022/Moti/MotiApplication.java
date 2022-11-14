@@ -41,6 +41,7 @@ public class MotiApplication {
 		Question q8 = new Question("Haluaisitko lähteä vaihto-opiskelijaksi?", query);
 		Question q9 = new Question("Onko tavoitteesi pyrkiä töihin heti opintojen jälkeen?", query);
 		Question q10 = new Question("Suosittelisitko Haaga-Heliaa esim. kavereillesi?", query);
+		
 
 		Question testq = new Question("test question", query2);
 
@@ -57,6 +58,8 @@ public class MotiApplication {
 
 		questionRepository.save(testq);
 		
+		Answer a1 = new Answer("Hain muutamaan ammattikorkeakouluun", q1);
+		answerRepository.save(a1);
 
 	
 			
