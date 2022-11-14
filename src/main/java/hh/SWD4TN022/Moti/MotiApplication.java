@@ -60,6 +60,10 @@ public class MotiApplication {
 		
 		Answer a1 = new Answer("Hain muutamaan ammattikorkeakouluun", q1);
 		answerRepository.save(a1);
+		Answer a2 = new Answer("Hain muutamaan ammattikorkeakouluun", q2);
+		answerRepository.save(a2);
+		Answer a3 = new Answer("Hain muutamaan ammattikorkeakouluun", q3);
+		answerRepository.save(a3);
 
 	
 			
