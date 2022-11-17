@@ -58,25 +58,25 @@ public class MotiApplication {
 
 		questionRepository.save(testq);
 		
-		Answer a1 = new Answer("Hain muutamaan ammattikorkeakouluun", q1);
+		Answer a1 = new Answer("Hain muutamaan ammattikorkeakouluun, Haaga-Helia oli ainut mihin pääsin sisään.", q1);
 		answerRepository.save(a1);
-		Answer a2 = new Answer("Hain muutamaan ammattikorkeakouluun", q2);
+		Answer a2 = new Answer("En ole.", q2);
 		answerRepository.save(a2);
-		Answer a3 = new Answer("Hain muutamaan ammattikorkeakouluun", q3);
+		Answer a3 = new Answer("Tietojenkäsittelyä", q3);
 		answerRepository.save(a3);
-		Answer a4 = new Answer("Hain muutamaan ammattikorkeakouluun", q4);
+		Answer a4 = new Answer("Kyllä", q4);
 		answerRepository.save(a4);
-		Answer a5 = new Answer("Hain muutamaan ammattikorkeakouluun", q5);
+		Answer a5 = new Answer("Linux palvelimet ja ohjelmoinnin kurssit", q5);
 		answerRepository.save(a5);
-		Answer a6 = new Answer("Hain muutamaan ammattikorkeakouluun", q6);
+		Answer a6 = new Answer("En kuulu.", q6);
 		answerRepository.save(a6);
-		Answer a7 = new Answer("Hain muutamaan ammattikorkeakouluun", q7);
+		Answer a7 = new Answer("Kaikki materiaalit voisi päivittää ajantasalle.", q7);
 		answerRepository.save(a7);
-		Answer a8 = new Answer("Hain muutamaan ammattikorkeakouluun", q8);
+		Answer a8 = new Answer("Voisin harkita.", q8);
 		answerRepository.save(a8);
-		Answer a9 = new Answer("Hain muutamaan ammattikorkeakouluun", q9);
+		Answer a9 = new Answer("Kyllä, mielellään jo opintojen aikana.", q9);
 		answerRepository.save(a9);
-		Answer a10 = new Answer("Hain muutamaan ammattikorkeakouluun", q10);
+		Answer a10 = new Answer("Kyllä", q10);
 		answerRepository.save(a10);
 
 	
