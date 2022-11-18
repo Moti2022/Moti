@@ -29,5 +29,7 @@ public class QueryRepositoryTest {
 		assertThat(queries.get(0).getHeading()).isEqualTo("Testikysely1");
 		
 	}
+	
+	
 
 }

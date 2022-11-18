@@ -5,13 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import hh.SWD4TN022.Moti.domain.QuestionRepository;
+import hh.SWD4TN022.Moti.domain.AnswerRepository;
 
 @ExtendWith(SpringExtension.class)
 @DataJpaTest
-public class QuestionRepositoryTest {
+public class AnswerRepositoryTest {
 	@Autowired
-	private QuestionRepository QuesRepository;
+	private AnswerRepository aRepository;
 	
 	
 
