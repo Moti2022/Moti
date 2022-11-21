@@ -138,9 +138,71 @@
   "question_id": 1,
   "name": "Mitä elokuvaa suosittelet",
   "query": {
-     "query_id": 1,
-     "heading": "Kulttuurikysely",
-     "description": "Kyselyssä kysytään suositeltavia elokuvaa, tv-sarjaa ja musiikkia"
+     "query_id": 1
+    }
+}
+		</code>
+	</pre>
+	
+	<h2>All Answers</h2>
+
+		<p>Method: GET</p>
+		<p>Endpoint: <a href="https://moti2022.herokuapp.com/answers">/answers</a></p>
+		<p>JSON example:</p>
+
+		<pre>
+		<code>
+[
+  {
+    "answer_id": 1,
+    "text": "Hain muutamaan ammattikorkeakouluun, Haaga-Helia oli ainut mihin pääsin sisään.",
+       "question": {
+       "question_id": 1,
+       "name": "Miksi päätit hakea Haaga-Heliaan?"
+    }
+  },
+  {
+    "answer_id": 2,
+	"text": "En ole.",
+	"question": {
+	"question_id": 2,
+	"name": "Oletko opiskellut jossain toisessa korkeamman tason koulutuksessa ennen Haaga-Heliaa?"
+    }
+  }, ...
+]
+		</code>
+	</pre>
+	
+		<h2>Answer by id</h2>
+		<p>Method: GET</p>
+		<p>Endpoint: <a href="https://moti2022.herokuapp.com/answers/1">/answers/1</a></p>
+		<p>JSON example:</p>
+
+		<pre>
+		<code>
+{
+  "answer_id": 1,
+  "text": "Hain muutamaan ammattikorkeakouluun, Haaga-Helia oli ainut mihin pääsin sisään.",
+    "question": {
+    "question_id": 1,
+    "name": "Miksi päätit hakea Haaga-Heliaan?"
+    }
+}
+
+		</code>
+	</pre>
+	
+	<h2>New Answer</h2>
+		<p>Method: POST</p>
+		<p>JSON example:</p>
+
+		<pre>
+		<code>
+{
+  "answer_id": 1,
+  "text": "Hain muutamaan ammattikorkeakouluun, Haaga-Helia oli ainut mihin pääsin sisään.",
+    "question": {
+    "question_id": 1
     }
 }
 		</code>
