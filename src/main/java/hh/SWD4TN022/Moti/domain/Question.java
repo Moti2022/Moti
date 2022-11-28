@@ -21,6 +21,7 @@ public class Question {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long question_id;
 	private String name;
+	private String type;
 
 
 	@JsonIgnoreProperties("questions")
@@ -32,11 +33,6 @@ public class Question {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "question")
 	private List<Answer> answers;
 	
-	@JoinColumn(name = "query_id")
-	//private List<Choice> choices;
-	
-	private Type type;
-
 	public Question() {
 	}
 
@@ -48,7 +44,7 @@ public class Question {
 //		this.type = type;
 //	}
 	
-	public Question(String name, Query query, Type type) {
+	public Question(String name, Query query, String type) {
 		super();
 		this.name = name;
 		this.query = query;
@@ -77,6 +73,14 @@ public class Question {
 
 	public void setQuery(Query query) {
 		this.query = query;
+	}
+	
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	@Override
