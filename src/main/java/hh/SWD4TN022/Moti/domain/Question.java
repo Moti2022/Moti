@@ -22,6 +22,7 @@ public class Question {
 	private Long question_id;
 	private String name;
 
+
 	@JsonIgnoreProperties("questions")
 	@ManyToOne
 	@JoinColumn(name = "query_id")
