@@ -10,4 +10,9 @@ public class TextQuestion extends Question {
 		this.setType("text");
 	}
 	
+	public TextQuestion(String question, Query query) {
+		super("text", query, question);
+		this.setType("text");
+	}
+	
 }
