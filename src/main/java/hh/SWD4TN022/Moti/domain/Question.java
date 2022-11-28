@@ -30,14 +30,28 @@ public class Question {
 	@JsonIgnoreProperties("question")
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "question")
 	private List<Answer> answers;
+	
+	@JoinColumn(name = "query_id")
+	//private List<Choice> choices;
+	
+	private Type type;
 
 	public Question() {
 	}
 
-	public Question(String name, Query query) {
+//	public Question(String name, Query query, List<Choice> choices, Type type) {
+//		super();
+//		this.name = name;
+//		this.query = query;
+//		this.choices = choices;
+//		this.type = type;
+//	}
+	
+	public Question(String name, Query query, Type type) {
 		super();
 		this.name = name;
 		this.query = query;
+		this.type = type;
 	}
 
 	public Long getQuestion_id() {
