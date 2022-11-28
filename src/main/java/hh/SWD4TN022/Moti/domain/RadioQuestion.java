@@ -19,7 +19,7 @@ public class RadioQuestion extends Question {
     }
 
     public RadioQuestion(String question, Query query) {
-        super("text", question, query);
+        super("text", query, question);
         this.choices = new ArrayList<>();
         this.setType("radio");
     }
