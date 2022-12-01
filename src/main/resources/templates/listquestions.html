@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
+<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+
 </head>
 <body>
 	<a href="/querylist">Back to Queries</a>
-	<table>
+	<table class="table table-striped">
 		<tr>
 			<th>Questions</th>
 		</tr>
 		<tr th:each="question : ${query.getQuestions()}">
 			<td th:text="${question.name}">Name</td>
-			<td><textarea></textarea></td>
 			
 		</tr>
 	</table>
