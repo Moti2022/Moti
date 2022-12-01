@@ -8,13 +8,13 @@
 </head>
 <body>
 	<div class="content">
-		<div class="header">
-			<h1>Add question</h1>
-		</div>
 		<div class="addQuestionForm">
 		    <form th:object="${question}" th:action="@{../savequestion}" action="#" method="post">
 		        <div class="form-row">
-					<table>
+					<table class="table table-stripped">
+						<tr th:each="query : ${query}">
+							<h1 td th:text="${query.getHeading}"/>
+						</tr>
 						<tr th:each="question : ${query.getQuestions()}">
 							<td th:text="${question.name}">Name</td>
 						</tr>
@@ -28,7 +28,7 @@
 					</div>
 					<br>
 					<div class="col">
-				  		<label for="question">Question</label>
+				  		<label for="question">Add question</label>
 						<textArea id="name" class="form-control" th:field="*{name}"></textArea>
 					</div>
 				</div>
