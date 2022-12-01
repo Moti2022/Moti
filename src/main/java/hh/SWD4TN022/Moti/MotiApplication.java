@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Bean;
 
 import hh.SWD4TN022.Moti.domain.Answer;
 import hh.SWD4TN022.Moti.domain.AnswerRepository;
+import hh.SWD4TN022.Moti.domain.Choice;
+import hh.SWD4TN022.Moti.domain.ChoiceRepository;
 //import hh.SWD4TN022.Moti.domain.Choice;
 //import hh.SWD4TN022.Moti.domain.ChoiceRepository;
 import hh.SWD4TN022.Moti.domain.Query;
@@ -25,7 +27,7 @@ public class MotiApplication {
 	}
 
 	@Bean
-	public CommandLineRunner moti(QueryRepository queryRepository, QuestionRepository questionRepository, AnswerRepository answerRepository) {
+	public CommandLineRunner moti(QueryRepository queryRepository, QuestionRepository questionRepository, AnswerRepository answerRepository, ChoiceRepository choiceRepository) {
 		return (args) -> {
 
 		Query query = new Query("Yleiskysely", "Opiskelu Haaga-Heliassa");
@@ -62,6 +64,9 @@ public class MotiApplication {
 		questionRepository.save(q10);
 
 		//questionRepository.save(testq1);
+		
+		Choice c1 = new Choice("Kyllä", q2);
+		choiceRepository.save(c1);
 		
 		Answer a1 = new Answer("Hain muutamaan ammattikorkeakouluun, Haaga-Helia oli ainut mihin pääsin sisään.", q1);
 		answerRepository.save(a1);
