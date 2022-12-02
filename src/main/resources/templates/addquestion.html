@@ -28,12 +28,12 @@
 					</div>
 					<br>
 					<div class="col">
-				  		<label for="type">Add question type</label>
-						<textArea id="type" class="form-control" th:field="*{type}"></textArea>
-					</div>
-					<br>
-					<<div class="col">
-				  		
+				  		<label for="type">Select question type</label>
+			 			<select id="type" th:field="*{type}" class="form-control">
+       						<option value="text">text</option>
+    						<option value="radio">radio</option>
+    						<option value="checkbox">checkbox</option>
+    					</select>
 					</div>
 					<br>
 					<div class="col">
