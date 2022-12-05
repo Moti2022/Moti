@@ -40,11 +40,11 @@ public class ChoiceController {
 
 		url = request.getRequestURI().toString();
 		System.out.println(url);
-		return "addquestion";
+		return "addchoice";
 	}
 	
 	@PostMapping(value = "/savechoice")
-	public String saveChoicen(@ModelAttribute Choice newChoice, Model model) {
+	public String saveChoice(@ModelAttribute Choice newChoice, Model model) {
 		choiceRepo.save(newChoice);
 		List<String> urlList = Arrays.asList(url.split("/"));
 		String redirectId = urlList.get(2);
