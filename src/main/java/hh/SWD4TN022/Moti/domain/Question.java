@@ -33,6 +33,10 @@ public class Question {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "question")
 	private List<Answer> answers;
 	
+	@JsonIgnoreProperties("question")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "question")
+	private List<Choice> choices;
+	
 	public Question() {
 	}
 
@@ -95,5 +99,15 @@ public class Question {
 	public void setAnswers(List<Answer> answers) {
 		this.answers = answers;
 	}
+
+	public List<Choice> getChoices() {
+		return choices;
+	}
+
+	public void setChoices(List<Choice> choices) {
+		this.choices = choices;
+	}
+	
+	
 
 }
