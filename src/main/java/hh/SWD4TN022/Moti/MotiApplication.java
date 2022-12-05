@@ -67,6 +67,29 @@ public class MotiApplication {
 		
 		Choice c1 = new Choice("Kyllä", q2);
 		choiceRepository.save(c1);
+		Choice c2 = new Choice("Ei", q2);
+		choiceRepository.save(c1);
+		Choice c3 = new Choice("Atkins", q6);
+		choiceRepository.save(c1);
+		Choice c4 = new Choice("Helga", q6);
+		choiceRepository.save(c1);
+		Choice c5 = new Choice("Skuuppi", q6);
+		choiceRepository.save(c1);
+		Choice c6 = new Choice("Talko", q6);
+		choiceRepository.save(c1);
+		Choice c7 = new Choice("Kyllä", q8);
+		choiceRepository.save(c1);
+		Choice c8 = new Choice("Ei", q8);
+		choiceRepository.save(c1);
+		Choice c9 = new Choice("Kyllä", q9);
+		choiceRepository.save(c1);
+		Choice c10 = new Choice("Ei", q9);
+		choiceRepository.save(c1);
+		Choice c11 = new Choice("Kyllä", q10);
+		choiceRepository.save(c1);
+		Choice c12 = new Choice("Ei", q10);
+		choiceRepository.save(c1);
+		
 		
 		Answer a1 = new Answer("Hain muutamaan ammattikorkeakouluun, Haaga-Helia oli ainut mihin pääsin sisään.", q1);
 		answerRepository.save(a1);
