@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>add choice</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+</head>
+<body>
+	<div class="content">
+	
+	<h2 th:text="${queries[0].question}"></h2>
+	
+	<form>
+		<div class="col-auto">
+			<label for="choicelist">Choice:</label> 
+			<select id="choicelist" th:field="*{choice}" class="form-control">
+			<option th:each="choice : ${choices}" th:value="${choice.choice_id}" th:text="${choice.name}">
+			</option>
+			</select>
+		</div>
+	</form>
+	</div>
+</body>
+</html>

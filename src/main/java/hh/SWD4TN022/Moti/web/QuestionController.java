@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import hh.SWD4TN022.Moti.domain.ChoiceRepository;
 import hh.SWD4TN022.Moti.domain.QueryRepository;
 import hh.SWD4TN022.Moti.domain.Question;
 import hh.SWD4TN022.Moti.domain.QuestionRepository;
@@ -33,6 +34,9 @@ public class QuestionController {
 
 	@Autowired
 	private QueryRepository queryRepo;
+	
+	@Autowired
+	private ChoiceRepository choiceRepo;
 
 	@GetMapping("/questionlist")
 	public String listQuestions(Model model) {
@@ -45,6 +49,7 @@ public class QuestionController {
 		model.addAttribute("questions", questionRepo.findAll());
 		model.addAttribute("question", new Question());
 		model.addAttribute("query", queryRepo.findById(query_id).get());
+		model.addAttribute("choice", choiceRepo.findAll());
 
 		url = request.getRequestURI().toString();
 		System.out.println(url);
