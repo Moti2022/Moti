@@ -34,9 +34,6 @@ public class QuestionController {
 
 	@Autowired
 	private QueryRepository queryRepo;
-	
-	@Autowired
-	private ChoiceRepository choiceRepo;
 
 	@GetMapping("/questionlist")
 	public String listQuestions(Model model) {
@@ -49,7 +46,6 @@ public class QuestionController {
 		model.addAttribute("questions", questionRepo.findAll());
 		model.addAttribute("question", new Question());
 		model.addAttribute("query", queryRepo.findById(query_id).get());
-		model.addAttribute("choice", choiceRepo.findAll());
 
 		url = request.getRequestURI().toString();
 		System.out.println(url);
