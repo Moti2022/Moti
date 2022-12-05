@@ -16,10 +16,10 @@
 			<td th:text="${question.name}"></td>
 			<td th:switch="${question.type}">
 				<span th:case="radio">
-					<a href="/querylist"><button>Edit</button></a>
+					<a href="/addchoice"><button>Edit</button></a>
 				</span> 
 				<span th:case="checkbox">
-					<a href="/querylist"><button>Edit</button></a>
+					<a href="/addchoice"><button>Edit</button></a>
 				</span>
 			</td>
 			<!-- <td th:text="${question.name}">Name</td> -->
