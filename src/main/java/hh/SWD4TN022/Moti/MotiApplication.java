@@ -93,7 +93,7 @@ public class MotiApplication {
 		
 		Answer a1 = new Answer("Hain muutamaan ammattikorkeakouluun, Haaga-Helia oli ainut mihin pääsin sisään.", q1);
 		answerRepository.save(a1);
-		Answer a2 = new Answer("En ole.", q2);
+		Answer a2 = new Answer("Ei", q2);
 		answerRepository.save(a2);
 		Answer a3 = new Answer("Tietojenkäsittelyä", q3);
 		answerRepository.save(a3);
@@ -101,20 +101,20 @@ public class MotiApplication {
 		answerRepository.save(a4);
 		Answer a5 = new Answer("Linux palvelimet ja ohjelmoinnin kurssit", q5);
 		answerRepository.save(a5);
-		Answer a6 = new Answer("En kuulu.", q6);
+		Answer a6 = new Answer("Atkins", q6);
 		answerRepository.save(a6);
 		Answer a7 = new Answer("Kaikki materiaalit voisi päivittää ajantasalle.", q7);
 		answerRepository.save(a7);
-		Answer a8 = new Answer("Voisin harkita.", q8);
+		Answer a8 = new Answer("Kyllä", q8);
 		answerRepository.save(a8);
-		Answer a9 = new Answer("Kyllä, mielellään jo opintojen aikana.", q9);
+		Answer a9 = new Answer("Kyllä", q9);
 		answerRepository.save(a9);
 		Answer a10 = new Answer("Kyllä", q10);
 		answerRepository.save(a10);
 
 		Answer a11 = new Answer("Vierailin Haaga-Heliassa opiskellessani.", q1);
 		answerRepository.save(a11);
-		Answer a12 = new Answer("En ole.", q2);
+		Answer a12 = new Answer("Ei", q2);
 		answerRepository.save(a12);
 		Answer a13 = new Answer("Tietojenkäsittelyä", q3);
 		answerRepository.save(a13);
@@ -122,11 +122,11 @@ public class MotiApplication {
 		answerRepository.save(a14);
 		Answer a15 = new Answer("Ohjelmistoprojekti 1", q5);
 		answerRepository.save(a15);
-		Answer a16 = new Answer("En", q6);
+		Answer a16 = new Answer("Helga", q6);
 		answerRepository.save(a16);
 		Answer a17 = new Answer("Ei ole ehdotuksia.", q7);
 		answerRepository.save(a17);
-		Answer a18 = new Answer("En", q8);
+		Answer a18 = new Answer("Ei", q8);
 		answerRepository.save(a18);
 		Answer a19 = new Answer("Kyllä", q9);
 		answerRepository.save(a19);
