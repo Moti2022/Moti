@@ -15,9 +15,6 @@
 		<tr th:each="question : ${query.getQuestions()}">
 			<td th:text="${question.name}"></td>
 			<td th:switch="${question.type}">
-				<span th:case="text">
-					<a href="https://avatars.githubusercontent.com/u/123259?v=4"><button>turha nappi</button></a>
-				</span>
 				<span th:case="radio">
 					<a href="/querylist"><button>Edit</button></a>
 				</span> 
