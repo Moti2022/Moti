@@ -18,7 +18,7 @@ public class Choice {
 	private String name;
 
 
-	@JsonIgnoreProperties("query")
+	@JsonIgnoreProperties({"query", "answers", "choices"})
 	@ManyToOne
 	@JoinColumn(name = "question_id") 
 	private Question question;
