@@ -24,3 +24,12 @@
 #queryList {
 	visibility: hidden;
 }
+
+.choiceSubmit{
+	border: none;
+	padding: 5px;
+	margin-top:20px;
+	border-radius:5px;
+	background-color:#715C8C; 
+	color: white;
+}
