@@ -13,7 +13,9 @@
 		<h2>All Queries</h2>
 
 		<p>Method: GET</p>
-		<p>Endpoint: <a href="https://moti2022.herokuapp.com/queries">/queries</a></p>
+		<p>
+			Endpoint: <a href="https://moti22.herokuapp.com/queries">/queries</a>
+		</p>
 		<p>JSON example:</p>
 
 		<pre>
@@ -35,7 +37,9 @@
 
 		<h2>Query by id</h2>
 		<p>Method: GET</p>
-		<p>Endpoint: <a href="https://moti2022.herokuapp.com/queries/1">/queries/1</a></p>
+		<p>
+			Endpoint: <a href="https://moti22.herokuapp.com/queries/1">/queries/1</a>
+		</p>
 		<p>JSON example:</p>
 
 		<pre>
@@ -63,7 +67,9 @@
 
 		<h2>All Questions</h2>
 		<p>Method: GET</p>
-		<p>Endpoint: <a href="https://moti2022.herokuapp.com/questions">/questions</a></p>
+		<p>
+			Endpoint: <a href="https://moti22.herokuapp.com/questions">/questions</a>
+		</p>
 		<p>JSON example:</p>
 
 		<pre>
@@ -111,7 +117,9 @@
 
 		<h2>Question by id</h2>
 		<p>Method: GET</p>
-		<p>Endpoint: <a href="https://moti2022.herokuapp.com/questions/1">/questions/1</a></p>
+		<p>
+			Endpoint: <a href="https://moti22.herokuapp.com/questions/1">/questions/1</a>
+		</p>
 		<p>JSON example:</p>
 
 		<pre>
@@ -143,11 +151,13 @@
 }
 		</code>
 	</pre>
-	
-	<h2>All Answers</h2>
+
+		<h2>All Answers</h2>
 
 		<p>Method: GET</p>
-		<p>Endpoint: <a href="https://moti2022.herokuapp.com/answers">/answers</a></p>
+		<p>
+			Endpoint: <a href="https://moti22.herokuapp.com/answers">/answers</a>
+		</p>
 		<p>JSON example:</p>
 
 		<pre>
@@ -172,10 +182,12 @@
 ]
 		</code>
 	</pre>
-	
+
 		<h2>Answer by id</h2>
 		<p>Method: GET</p>
-		<p>Endpoint: <a href="https://moti2022.herokuapp.com/answers/1">/answers/1</a></p>
+		<p>
+			Endpoint: <a href="https://moti22.herokuapp.com/answers/1">/answers/1</a>
+		</p>
 		<p>JSON example:</p>
 
 		<pre>
@@ -191,8 +203,8 @@
 
 		</code>
 	</pre>
-	
-	<h2>New Answer</h2>
+
+		<h2>New Answer</h2>
 		<p>Method: POST</p>
 		<p>JSON example:</p>
 
@@ -205,6 +217,81 @@
     "question_id": 1
     }
 }
+		</code>
+	</pre>
+
+		<h2>All choices</h2>
+		<p>Method: GET</p>
+		<p>JSON example:</p>
+
+		<pre>
+		<code>
+{
+	"choice_id": 11,
+	"name": "Kyllä",
+	"question": {
+		"question_id": 2,
+		"name": "Oletko opiskellut jossain toisessa korkeamman tason koulutuksessa ennen Haaga-Heliaa?",
+		"type": "radio",
+		"answers": [
+			{
+			"answer_id": 2,
+			"text": "Ei"
+			},
+			{
+			"answer_id": 12,
+			"text": "Ei"
+			},
+			{
+			"answer_id": 22,
+			"text": "Kyllä"
+			}
+		],
+		"choices": [
+			{
+			"choice_id": 11,
+			"name": "Kyllä"
+			},
+			{
+			"choice_id": 12,
+			"name": "Ei"
+			}
+		]
+	}
+	},
+	{
+	"choice_id": 12,
+	"name": "Ei",
+	"question": {
+		"question_id": 2,
+		"name": "Oletko opiskellut jossain toisessa korkeamman tason koulutuksessa ennen Haaga-Heliaa?",
+		"type": "radio",
+		"answers": [
+			{
+			"answer_id": 2,
+			"text": "Ei"
+			},
+			{
+			"answer_id": 12,
+			"text": "Ei"
+			},
+			{
+			"answer_id": 22,
+			"text": "Kyllä"
+			}
+		],
+		"choices": [
+			{
+			"choice_id": 11,
+			"name": "Kyllä"
+			},
+			{
+			"choice_id": 12,
+			"name": "Ei"
+			}
+		]
+	}
+},
 		</code>
 	</pre>
 	</div>

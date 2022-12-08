@@ -17,6 +17,7 @@ public class Choice {
 	private Long choice_id;
 	private String name;
 
+
 	@JsonIgnoreProperties("query")
 	@ManyToOne
 	@JoinColumn(name = "question_id") 
