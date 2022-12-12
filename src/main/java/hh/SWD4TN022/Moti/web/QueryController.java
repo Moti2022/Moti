@@ -56,7 +56,7 @@ public class QueryController {
 		return "redirect:querylist";
 	}
 
-	// Add questions for query based on it's id (NOT FINISHED)
+	// Add questions for query based on it's id
 	@GetMapping("/listquestions/{id}")
 	public String listQueryQuestions(@PathVariable("id") Long query_id, Model model) {
 		model.addAttribute("query", queryRepo.findById(query_id).get());
@@ -81,5 +81,4 @@ public class QueryController {
 		return queryRepo.save(query);
 	}
 	
-	//TODO: REST put
 }
