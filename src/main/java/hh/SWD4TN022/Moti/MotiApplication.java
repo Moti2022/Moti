@@ -32,7 +32,8 @@ public class MotiApplication {
 					"Kyselyssä kartoitetaan ensimmäisen vuosikurssin opiskelijoiden mielipiteitä ja kokemuksia opintopolustaan yleensä, opetuksesta ja oppimisesta, ja opintojen suunnittelusta sekä yleisesti tulevaisuudesta.");
 			queryRepository.save(query);
 
-			Query query2 = new Query("Kysely", "Testikysely");
+			Query query2 = new Query("Opiskelijaravintolat: Vähemmän hävikkiä",
+					"Ravintoloissa, kahviloissa ja kouluissa noin 20 % täysin syömäkelpoisia ruokia tai raaka-aineita päätyy päivittäin biojätteeksi. Heittäessämme ruokaa tai raaka-aineita pois, ruoantuotantoon käytettävät resurssit kuten vesi, energia, maapinta-ala, lannoitteet, ravinteet ja työpanos menevät hukkaan ja ruoantuotannon päästöt aiheutuvat täysin turhaan. Me Compass Groupilla teemme sinnikkäästi töitä ruokahävikin pienentämiseksi ruoantuontannon ja tarjoilun eri vaiheissa.");
 			queryRepository.save(query2);
 
 			Question q1 = new Question("Miksi päätit hakea Haaga-Heliaan?", query, "text");
