@@ -30,7 +30,7 @@ public class MotiApplication {
 	public CommandLineRunner moti(QueryRepository queryRepository, QuestionRepository questionRepository, AnswerRepository answerRepository, ChoiceRepository choiceRepository) {
 		return (args) -> {
 
-		Query query = new Query("Yleiskysely", "Opiskelu Haaga-Heliassa");
+		Query query = new Query("Haaga-Helian fuksikysely", "Opiskelu Haaga-Heliassa ensimmäisenä vuotena");
 		queryRepository.save(query);
 
 		Query query2 = new Query("Kysely", "Testikysely");
