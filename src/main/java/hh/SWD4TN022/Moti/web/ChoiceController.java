@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import hh.SWD4TN022.Moti.domain.Choice;
 import hh.SWD4TN022.Moti.domain.ChoiceRepository;
-import hh.SWD4TN022.Moti.domain.Question;
 import hh.SWD4TN022.Moti.domain.QuestionRepository;
 
 @CrossOrigin
@@ -56,5 +56,11 @@ public class ChoiceController {
 	public @ResponseBody List<Choice> choiceListRest() {
 		return (List<Choice>) choiceRepo.findAll();
 	}
+	
+	// REST saving a choice
+	@PostMapping("/choices")
+	public @ResponseBody Choice saveChoiceRest(@RequestBody Choice choice) {
+		return choiceRepo.save(choice);
+		}
 
 }
