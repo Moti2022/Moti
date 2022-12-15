@@ -19,7 +19,7 @@
 					<a th:href="@{/addchoice/{id}(id=${question.question_id})}"><button>Edit</button></a>
 				</span> 
 				<span th:case="checkbox">
-					<a href="@{/addchoice{id}(id=${question.question_id})}"><button>Edit</button></a>
+					<a th:href="@{/addchoice/{id}(id=${question.question_id})}"><button>Edit</button></a>
 				</span>
 			</td>
 			<!-- <td th:text="${question.name}">Name</td> -->
